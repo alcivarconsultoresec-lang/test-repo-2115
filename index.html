@@ -4,224 +4,241 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alcívar Consultores | Automatización de procesos para PYMEs</title>
-  <meta name="description" content="Alcívar Consultores implementa automatización de procesos de negocio, sistemas comerciales, IA aplicada y redes ejecutivas para PYMEs." />
+  <meta name="description" content="Alcívar Consultores diseña sistemas de automatización, inteligencia comercial, WhatsApp operativo y procesos medibles para PYMEs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body class="consulting-home">
-  <header class="ac-header">
-    <a class="ac-logo" href="#inicio">Alcívar Consultores</a>
-    <nav class="ac-menu" aria-label="Navegación principal">
-      <a href="#enfoque">Enfoque</a>
-      <a href="#capacidades">Capacidades</a>
+<body class="vanguard-home">
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="v-nav">
+    <a class="v-brand" href="#inicio" aria-label="Alcívar Consultores">
+      <span class="brand-core"></span>
+      <span>Alcívar Consultores</span>
+    </a>
+    <nav class="v-links" aria-label="Navegación principal">
+      <a href="#plataforma">Sistema</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#comparativa">Antes / Después</a>
       <a href="#circulo">Círculo</a>
-      <a href="#productos">Productos</a>
-      <a href="#modelo">Modelo</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    <button class="v-menu" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </header>
 
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <a href="#plataforma">Sistema</a>
+    <a href="#modulos">Módulos</a>
+    <a href="#comparativa">Antes / Después</a>
+    <a href="#circulo">Círculo</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contacto">Contacto</a>
+  </aside>
+
   <main id="inicio">
-    <section class="ac-hero2">
-      <div class="hero-label">Consultoría de implementación · procesos · automatización · IA aplicada</div>
-      <div class="hero-layout">
-        <div>
-          <h1>Automatizamos procesos de negocio para que las PYMEs vendan, respondan y operen con más control.</h1>
-          <p class="hero-intro">Alcívar Consultores integra estrategia comercial, tecnología accesible y técnicos multidisciplinarios para convertir operaciones desordenadas en sistemas de trabajo medibles.</p>
-          <div class="hero-actions2">
-            <a class="ac-primary" href="#contacto">Solicitar diagnóstico</a>
-            <a class="ac-secondary" href="#circulo">Conocer Círculo de Gerentes</a>
+    <section class="experience-hero">
+      <canvas id="flowCanvas" aria-hidden="true"></canvas>
+      <div class="mesh mesh-a"></div>
+      <div class="mesh mesh-b"></div>
+      <div class="grid-layer"></div>
+
+      <div class="hero-content reveal">
+        <div class="hero-copy">
+          <div class="signal-chip"><span></span> IA aplicada · procesos · automatización · gerencia</div>
+          <h1>Toma control de tus procesos comerciales y operativos.</h1>
+          <p>Diseñamos sistemas de trabajo para PYMEs que conectan WhatsApp, datos, IA, seguimiento comercial y equipos técnicos multidisciplinarios.</p>
+          <div class="hero-actions">
+            <a class="v-btn primary" href="#contacto">Solicitar diagnóstico operativo</a>
+            <a class="v-btn secondary" href="#plataforma">Ver sistema</a>
           </div>
         </div>
-        <aside class="hero-index" aria-label="Resumen ejecutivo">
-          <p>Producto principal</p>
-          <strong>Automatización de procesos de negocio</strong>
-          <ul>
-            <li>Ventas y seguimiento comercial</li>
-            <li>WhatsApp y atención al cliente</li>
-            <li>Reportes, datos y tableros</li>
-            <li>Operaciones internas y back office</li>
-          </ul>
-        </aside>
+
+        <div class="command-center spotlight-card">
+          <div class="cc-top">
+            <div>
+              <span class="mini">Business Process OS</span>
+              <strong>Panel de control</strong>
+            </div>
+            <span class="live-dot">Live</span>
+          </div>
+          <div class="metric-grid">
+            <article><span>Leads sin seguimiento</span><strong data-counter="42">0</strong><small>detectables</small></article>
+            <article><span>Procesos candidatos</span><strong data-counter="18">0</strong><small>para automatizar</small></article>
+            <article><span>Horas recuperables</span><strong data-counter="64">0</strong><small>por mes</small></article>
+            <article><span>Gerentes conectados</span><strong data-counter="120">0</strong><small>objetivo inicial</small></article>
+          </div>
+          <div class="flow-list">
+            <div><span></span> WhatsApp → clasificación → seguimiento</div>
+            <div><span></span> Encuesta → entrevista → Pulso Gerencial</div>
+            <div><span></span> Datos → tablero → decisión</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="ac-section intro-statement" id="enfoque">
-      <div class="statement-number">01</div>
-      <div>
-        <p class="ac-overline">Nuestra tesis</p>
-        <h2>La ventaja no está en “usar IA”. Está en rediseñar cómo trabaja el negocio.</h2>
+    <section class="platform-section reveal" id="plataforma">
+      <div class="section-intro">
+        <span class="kicker">Sistema operativo comercial</span>
+        <h2>La consultoría no se presenta como una lista de servicios. Se presenta como una infraestructura de control.</h2>
+        <p>El producto principal es la automatización de procesos de negocio. El Círculo de Gerentes abre relaciones. Pulso Gerencial convierte datos en autoridad. Mesa de Gerentes lleva esa relación al plano presencial.</p>
       </div>
-      <div class="statement-copy">
-        <p>Muchas PYMEs ya venden por WhatsApp, redes sociales, referidos o llamadas. El problema es que esas conversaciones no siempre se convierten en procesos: no hay seguimiento, medición, responsables, reportes ni automatización.</p>
-        <p>Nuestra función es intervenir ese punto: mapear el proceso, ordenar la información, conectar herramientas y entrenar al equipo para operar con una estructura más profesional.</p>
+
+      <div class="os-map spotlight-card">
+        <div class="os-node core">Automatización<br>de Procesos</div>
+        <div class="os-node n1">WhatsApp Control Desk</div>
+        <div class="os-node n2">FlowOps</div>
+        <div class="os-node n3">AI Business Copilot</div>
+        <div class="os-node n4">Pulso Gerencial</div>
+        <div class="os-node n5">Círculo de Gerentes</div>
+        <div class="os-node n6">Mesa de Gerentes</div>
+        <svg viewBox="0 0 900 440" class="os-lines" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M450 220 C290 120 220 110 135 95" />
+          <path d="M450 220 C620 110 710 100 785 95" />
+          <path d="M450 220 C275 250 200 295 105 340" />
+          <path d="M450 220 C625 255 695 300 795 345" />
+          <path d="M450 220 C445 120 445 90 450 50" />
+          <path d="M450 220 C455 330 455 360 450 405" />
+        </svg>
       </div>
     </section>
 
-    <section class="ac-section capability-section" id="capacidades">
-      <div class="section-title-row">
+    <section class="module-section reveal" id="modulos">
+      <div class="section-intro compact">
+        <span class="kicker">Módulos de implementación</span>
+        <h2>Una suite de capacidades con nombres, funciones y resultados.</h2>
+      </div>
+
+      <div class="module-grid">
+        <article class="module-card spotlight-card" data-module="scan">
+          <small>01</small><h3>Process Scan</h3>
+          <p>Diagnóstico de procesos comerciales, operativos y administrativos para detectar fricción, pérdida de oportunidades y tareas automatizables.</p>
+        </article>
+        <article class="module-card spotlight-card" data-module="flow">
+          <small>02</small><h3>FlowOps</h3>
+          <p>Diseño e implementación de flujos internos: formularios, tareas, responsables, alertas, reportes y rutinas de control.</p>
+        </article>
+        <article class="module-card spotlight-card" data-module="wa">
+          <small>03</small><h3>WhatsApp Control Desk</h3>
+          <p>Atención, clasificación, respuestas rápidas, etiquetas, listas, derivaciones y seguimiento comercial desde WhatsApp.</p>
+        </article>
+        <article class="module-card spotlight-card" data-module="copilot">
+          <small>04</small><h3>AI Business Copilot</h3>
+          <p>Asistentes para redacción, clasificación, lectura de datos, reportes, propuestas y soporte a decisiones gerenciales.</p>
+        </article>
+        <article class="module-card spotlight-card" data-module="pulse">
+          <small>05</small><h3>Pulso Gerencial</h3>
+          <p>Publicación editorial basada en encuestas, entrevistas y señales de mercado para producir autoridad y conversación.</p>
+        </article>
+        <article class="module-card spotlight-card" data-module="circle">
+          <small>06</small><h3>Círculo de Gerentes</h3>
+          <p>Sistema gratuito de relación ejecutiva: invitación, encuesta, entrevista, base de datos y acceso futuro a networking.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="comparison-section reveal" id="comparativa">
+      <div class="section-intro compact">
+        <span class="kicker">Antes / después</span>
+        <h2>El valor está en convertir caos operativo en control visible.</h2>
+      </div>
+      <div class="comparison-shell spotlight-card">
+        <div class="compare-tabs" role="tablist" aria-label="Comparación">
+          <button class="compare-tab active" data-view="before">Antes</button>
+          <button class="compare-tab" data-view="after">Con Alcívar Consultores</button>
+        </div>
+        <div class="compare-body">
+          <div class="compare-panel active" data-panel="before">
+            <div class="compare-title">Operación manual dispersa</div>
+            <ul>
+              <li>Clientes escriben por WhatsApp y se pierden conversaciones.</li>
+              <li>No existe seguimiento ni tablero de oportunidades.</li>
+              <li>Los reportes dependen de memoria, urgencia y revisión manual.</li>
+              <li>El gerente toma decisiones sin señales actualizadas.</li>
+            </ul>
+          </div>
+          <div class="compare-panel" data-panel="after">
+            <div class="compare-title">Sistema medible y accionable</div>
+            <ul>
+              <li>Leads clasificados y derivados según intención.</li>
+              <li>Seguimiento y recordatorios visibles para el equipo.</li>
+              <li>Indicadores semanales para gerencia.</li>
+              <li>Círculo de Gerentes y Pulso Gerencial activan confianza y nuevas oportunidades.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="circle-section reveal" id="circulo">
+      <div class="circle-copy">
+        <span class="kicker">Activo estratégico</span>
+        <h2>Círculo de Gerentes no es comunidad. Es una máquina de relación ejecutiva.</h2>
+        <p>Invitamos gerentes por WhatsApp a participar gratis. El gerente responde una encuesta, participa en una entrevista breve y recibe información útil como pago simbólico. A mediano plazo, accede a cenas de networking donde confirma menú y cubre su consumo.</p>
+      </div>
+      <div class="journey spotlight-card">
+        <div class="journey-step active"><span>01</span><strong>Invitación WhatsApp</strong><p>Entrada directa y personalizada.</p></div>
+        <div class="journey-step"><span>02</span><strong>Encuesta</strong><p>Primer levantamiento de datos.</p></div>
+        <div class="journey-step"><span>03</span><strong>Entrevista</strong><p>Videollamada o reunión breve.</p></div>
+        <div class="journey-step"><span>04</span><strong>Pulso Gerencial</strong><p>Publicación con información útil.</p></div>
+        <div class="journey-step"><span>05</span><strong>Mesa de Gerentes</strong><p>Cena con hotel partner.</p></div>
+        <div class="journey-step"><span>06</span><strong>Proyecto</strong><p>Automatización como oportunidad natural.</p></div>
+      </div>
+    </section>
+
+    <section class="integrations-section reveal">
+      <div class="section-intro compact">
+        <span class="kicker">Capa técnica</span>
+        <h2>Herramientas accesibles conectadas como sistema.</h2>
+      </div>
+      <div class="ticker" aria-label="Herramientas e integraciones">
+        <div class="ticker-track">
+          <span>WhatsApp Business</span><span>Google Sheets</span><span>Make</span><span>n8n</span><span>Airtable</span><span>Notion</span><span>Looker Studio</span><span>Google Forms</span><span>OpenAI</span><span>Calendar</span>
+          <span>WhatsApp Business</span><span>Google Sheets</span><span>Make</span><span>n8n</span><span>Airtable</span><span>Notion</span><span>Looker Studio</span><span>Google Forms</span><span>OpenAI</span><span>Calendar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section reveal" id="portfolio">
+      <div class="section-intro compact">
+        <span class="kicker">Portfolio vivo</span>
+        <h2>Activos reales que luego tendrán identidad independiente.</h2>
+      </div>
+      <div class="portfolio-grid">
+        <a class="portfolio-card spotlight-card" href="clientes/catering-marbella/">
+          <span>01</span><strong>Catering Marbella</strong><p>Catering, eventos y servicio gastronómico.</p>
+        </a>
+        <a class="portfolio-card spotlight-card" href="clientes/ecos-huertos-munay/">
+          <span>02</span><strong>Ecos Huertos Munay</strong><p>Ecohuertos, comunidad y cultura verde en Manta.</p>
+        </a>
+        <article class="portfolio-card muted spotlight-card">
+          <span>03</span><strong>Próximos casos</strong><p>Hoteles, foodservice, comercio local y servicios.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section reveal" id="contacto">
+      <div class="contact-panel spotlight-card">
         <div>
-          <p class="ac-overline">Capacidades</p>
-          <h2>Servicios diseñados para operación real.</h2>
+          <span class="kicker">Diagnóstico inicial</span>
+          <h2>Identifiquemos qué proceso está drenando tiempo, ventas o control.</h2>
+          <p>Una conversación de diagnóstico permite detectar el primer flujo que conviene ordenar: ventas, atención, reportes, inventario, coordinación, seguimiento o captación gerencial.</p>
         </div>
-        <p>Actuamos como una unidad externa de implementación. No vendemos solo páginas ni publicaciones: construimos flujos comerciales, operativos y digitales que puedan sostenerse en el negocio.</p>
-      </div>
-      <div class="capability-grid">
-        <article>
-          <span>01</span>
-          <h3>Automatización comercial</h3>
-          <p>Captura de leads, formularios, CRM simple, seguimiento, respuestas rápidas y recordatorios para equipos de venta.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Atención por WhatsApp</h3>
-          <p>Diseño de guiones, clasificación de consultas, etiquetas, listas, respuestas y rutas de derivación.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Procesos internos</h3>
-          <p>Automatización de tareas repetitivas en administración, inventario, pedidos, reportes y coordinación operativa.</p>
-        </article>
-        <article>
-          <span>04</span>
-          <h3>Datos y tableros</h3>
-          <p>Indicadores gerenciales, paneles de control, seguimiento de oportunidades y lectura semanal de resultados.</p>
-        </article>
-        <article>
-          <span>05</span>
-          <h3>Presencia digital corporativa</h3>
-          <p>Sitios web funcionales, páginas por campaña, portfolio, formularios y activos preparados para conversión.</p>
-        </article>
-        <article>
-          <span>06</span>
-          <h3>IA aplicada</h3>
-          <p>Asistentes, prompts operativos, clasificación de mensajes, generación de respuestas y apoyo a decisiones.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="ac-section circle-executive" id="circulo">
-      <div class="circle-content">
-        <p class="ac-overline">Activo estratégico de relación</p>
-        <h2>Círculo de Gerentes</h2>
-        <p class="circle-lead">Un sistema de acercamiento ejecutivo para abrir conversaciones con gerentes, levantar información del mercado y construir confianza antes de ofrecer automatización.</p>
-      </div>
-      <div class="circle-panel">
-        <h3>Cómo funciona</h3>
-        <p>El gerente recibe una invitación por WhatsApp para participar gratuitamente en una primera encuesta sectorial. Luego se realiza una entrevista breve, por videollamada o de forma presencial. Con la base de datos consolidada, se prepara una publicación editorial con información útil para los participantes.</p>
-        <div class="circle-points">
-          <span>Invitación por WhatsApp</span>
-          <span>Encuesta inicial</span>
-          <span>Entrevista corta</span>
-          <span>Publicación editorial</span>
-          <span>Información como incentivo</span>
-          <span>Cenas de networking</span>
+        <div class="contact-actions">
+          <a class="v-btn primary" href="https://wa.me/593979716053?text=Hola,%20quiero%20solicitar%20un%20diagn%C3%B3stico%20de%20automatizaci%C3%B3n%20para%20mi%20negocio" target="_blank" rel="noreferrer">Solicitar por WhatsApp</a>
+          <a class="v-btn secondary dark" href="mailto:leonil88@gmail.com">Enviar correo</a>
         </div>
-      </div>
-    </section>
-
-    <section class="ac-section product-system" id="productos">
-      <div class="section-title-row">
-        <div>
-          <p class="ac-overline">Arquitectura de productos</p>
-          <h2>Una estrategia con productos separados y funciones distintas.</h2>
-        </div>
-        <p>La consultoría vende automatización a empresas. El Círculo de Gerentes abre relaciones. La publicación editorial convierte datos en autoridad. Las cenas activan networking presencial con gerentes ya calificados.</p>
-      </div>
-      <div class="product-grid">
-        <article>
-          <small>Producto comercial</small>
-          <h3>Automatización de Procesos de Negocio</h3>
-          <p>Oferta principal para empresas: diagnóstico, diseño, implementación y transferencia de sistemas comerciales, operativos y administrativos.</p>
-        </article>
-        <article>
-          <small>Captación ejecutiva</small>
-          <h3>Círculo de Gerentes</h3>
-          <p>Red gratuita por invitación para gerentes y tomadores de decisión. El pago del gerente es información: responde, participa y recibe datos útiles.</p>
-        </article>
-        <article>
-          <small>Producto editorial</small>
-          <h3>Pulso Gerencial</h3>
-          <p>Publicación basada en encuestas, entrevistas y tendencias detectadas. Sirve como pieza de autoridad para LinkedIn, WhatsApp y prospección.</p>
-        </article>
-        <article>
-          <small>Networking presencial</small>
-          <h3>Mesa de Gerentes</h3>
-          <p>Cenas ejecutivas de mediano plazo con hotel partner. La participación no tiene membresía; cada asistente confirma menú y cancela su consumo.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="ac-section sectors-section">
-      <p class="ac-overline">Sectores objetivo</p>
-      <h2>El Círculo puede convocar a todos los sectores; la automatización se prioriza donde el impacto es inmediato.</h2>
-      <div class="sector-list">
-        <a>Hoteles y alojamiento</a>
-        <a>Restaurantes y foodservice</a>
-        <a>Catering y eventos</a>
-        <a>Servicios profesionales</a>
-        <a>Comercio local</a>
-        <a>Centros de salud, belleza y bienestar</a>
-      </div>
-    </section>
-
-    <section class="ac-section delivery-model" id="modelo">
-      <div>
-        <p class="ac-overline">Modelo de entrega</p>
-        <h2>Un equipo técnico multidisciplinario, coordinado alrededor del resultado.</h2>
-      </div>
-      <div class="delivery-steps">
-        <article><span>Diagnosticar</span><p>Entendemos el proceso actual, los cuellos de botella y las oportunidades de automatización.</p></article>
-        <article><span>Diseñar</span><p>Definimos flujo, herramientas, responsables, mensajes, datos y puntos de control.</p></article>
-        <article><span>Implementar</span><p>Construimos la solución con técnicos en automatización, web, datos, diseño, contenido e integraciones.</p></article>
-        <article><span>Transferir</span><p>Entrenamos al equipo, documentamos el sistema y dejamos una ruta de mejora continua.</p></article>
-      </div>
-    </section>
-
-    <section class="ac-section team-section">
-      <div class="team-copy">
-        <p class="ac-overline">Red técnica</p>
-        <h2>Capacidad flexible para proyectos comerciales, operativos y digitales.</h2>
-        <p>La firma articula técnicos multidisciplinarios según el proyecto: automatizadores, desarrolladores web, integradores no-code/low-code, analistas de datos, diseñadores, redactores comerciales y operadores de implementación.</p>
-      </div>
-      <div class="team-matrix">
-        <span>Automatización</span>
-        <span>Web corporativa</span>
-        <span>CRM y datos</span>
-        <span>WhatsApp Business</span>
-        <span>IA aplicada</span>
-        <span>Diseño y contenido</span>
-      </div>
-    </section>
-
-    <section class="ac-section portfolio-clean" id="portfolio">
-      <div>
-        <p class="ac-overline">Portfolio</p>
-        <h2>Casos reales en construcción.</h2>
-        <p>El portfolio se usará como prueba de capacidad, no como vitrina de plantillas. Cada proyecto tendrá su propia dirección visual y enlace independiente.</p>
-      </div>
-      <div class="portfolio-links">
-        <a href="clientes/catering-marbella/"><strong>Catering Marbella</strong><span>Catering y eventos</span></a>
-        <a href="clientes/ecos-huertos-munay/"><strong>Ecos Huertos Munay</strong><span>Ecohuertos · Manta</span></a>
-      </div>
-    </section>
-
-    <section class="ac-section contact-executive" id="contacto">
-      <div>
-        <p class="ac-overline">Contacto</p>
-        <h2>Conversemos sobre el proceso que hoy está frenando tu crecimiento.</h2>
-      </div>
-      <div class="contact-card">
-        <p>Solicita un diagnóstico inicial para identificar qué parte de tu operación comercial, atención o administración puede automatizarse primero.</p>
-        <button class="ac-primary" data-wa="Hola, quiero solicitar un diagnóstico de automatización de procesos para mi negocio">Escribir por WhatsApp</button>
       </div>
     </section>
   </main>
 
-  <footer class="ac-footer">
-    <p>© <span id="year"></span> Alcívar Consultores.</p>
-    <p>Automatización de procesos · Pulso Gerencial · Círculo de Gerentes</p>
+  <footer class="v-footer">
+    <div><strong>Alcívar Consultores</strong><p>Automatización de procesos · Círculo de Gerentes · Pulso Gerencial</p></div>
+    <div><span id="year"></span><span>Santiago · Manta · remoto</span></div>
   </footer>
+
   <script src="assets/app.js"></script>
 </body>
 </html>
