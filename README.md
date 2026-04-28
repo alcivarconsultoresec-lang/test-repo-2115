@@ -1,27 +1,34 @@
 # Alcívar Consultores — Portfolio Comercial Digital
 
-Repositorio de la web madre de Alcívar Consultores: consultoría comercial, automatización con IA, páginas web express, campañas de WhatsApp y Círculo de Gerentes.
+Repositorio de la web corporativa de Alcívar Consultores: consultoría comercial, automatización, presencia digital y portfolio real de páginas independientes para empresas.
 
-## Estructura
+## Cambio de enfoque
 
-- `index.html`: página principal de la consultoría.
-- `assets/styles.css`: diseño premium responsive.
-- `assets/app.js`: filtros del portafolio y diagnóstico interactivo.
-- `demos/`: 10 casos demostrativos ficticios por nicho.
-- `prospectos/segmentacion.csv`: matriz inicial para clasificar prospectos.
+Este repositorio ya no se plantea como una colección de demos genéricas. La estrategia correcta es construir páginas reales, funcionales y compartibles para empresas concretas, con enlaces propios dentro del mismo repositorio.
 
-## Casos incluidos
+Cada caso debe tener:
 
-1. Alcívar Consultores — consultoría IA y automatización.
-2. Casa Oliva Café — cafetería/brunch.
-3. Nori Express — sushi/delivery.
-4. Dulce Aurora — pastelería.
-5. Aura Nails Studio — uñas/belleza.
-6. Corte Noble — barbería.
-7. Pulso Fit Studio — gimnasio.
-8. VetCare Urbano — veterinaria.
-9. Luma Spa Urbano — spa.
-10. Mercado Ágil — tienda/catálogo WhatsApp.
+- identidad visual propia,
+- estructura distinta,
+- tono adecuado al rubro,
+- enlace independiente,
+- posibilidad real de ser usado por el cliente,
+- autorización y mejoras con material real cuando corresponda.
+
+## Estructura actual
+
+- `index.html`: sitio corporativo de Alcívar Consultores.
+- `assets/styles.css`: estilos corporativos y estilos diferenciados por cliente.
+- `assets/app.js`: interacciones y botones WhatsApp.
+- `clientes/catering-marbella/`: página real inicial de Catering Marbella.
+- `clientes/ecos-huertos-munay/`: página real inicial de Ecos Huertos Munay.
+- `prospectos/segmentacion.csv`: matriz inicial para organizar prospectos.
+
+## Casos reales iniciales
+
+1. Alcívar Consultores — sitio corporativo madre.
+2. Catering Marbella — catering, banquetería y eventos.
+3. Ecos Huertos Munay — ecohuertos y cultura verde en Manta.
 
 ## Publicación en GitHub Pages
 
@@ -31,6 +38,10 @@ Repositorio de la web madre de Alcívar Consultores: consultoría comercial, aut
 4. Folder: `/root`.
 5. Guardar y esperar la URL pública.
 
-## Nota legal
+URL esperada:
 
-Los casos del portafolio son demostrativos y ficticios. No usan marcas, logos, fotografías ni textos propietarios de prospectos reales.
+`https://alcivarconsultoresec-lang.github.io/test-repo-2115/`
+
+## Nota de trabajo
+
+Las páginas de clientes están en versión inicial. Deben enriquecerse con fotografías autorizadas, historia real, servicios finales, datos de contacto, testimonios y ajustes visuales propios.
