@@ -1,0 +1,17 @@
+name: Static site validation
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f assets/styles.css
+          test -f assets/app.js
+          test -d demos
