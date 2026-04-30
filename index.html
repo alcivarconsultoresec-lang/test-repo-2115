@@ -1,18 +1,41 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alcívar Consultores | Automatización de procesos para PYMEs</title>
-  <meta name="description" content="Alcívar Consultores diseña sistemas de automatización, inteligencia comercial, WhatsApp operativo y procesos medibles para PYMEs." />
-  <meta http-equiv="refresh" content="0; url=experiencia/" />
-  <style>body{margin:0;font-family:Inter,Arial,sans-serif;background:#071224;color:#fff;min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}a{color:#8ddcff;font-weight:800}h1{font-size:clamp(2rem,8vw,4rem);line-height:.95;letter-spacing:-.06em}</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Impresos Triplea | La mejor impresión al mejor precio</title>
+<meta name="description" content="Landing page de Impresos Triplea: offset, láser, plotter, DTF textil, flyers, tarjetas, stickers, pendones y ropa personalizada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Alcívar Consultores</h1>
-    <p>Redirigiendo a la experiencia principal...</p>
-    <p><a href="experiencia/">Entrar ahora</a></p>
-  </main>
+<header class="nav">
+<a class="brand" href="#inicio"><span class="mark">A</span><span><b>Impresos Triplea</b><small>La mejor impresión al mejor precio</small></span></a>
+<button id="menuBtn" class="menu" aria-label="Abrir menú">☰</button>
+<nav id="navLinks"><a href="#servicios">Servicios</a><a href="#dtf">DTF</a><a href="#ofertas">Ofertas</a><a href="#contacto">Contacto</a></nav>
+</header>
+<main>
+<section id="inicio" class="hero">
+<div class="wrap heroGrid">
+<div class="copy reveal">
+<p class="kicker">Offset · Láser · Plotter · DTF Textil</p>
+<h1>Impresión profesional para hacer visible tu marca.</h1>
+<p class="lead">Flyers, tarjetas, pendones, stickers, ropa personalizada y material comercial con estilo limpio, moderno y enfocado en vender.</p>
+<div class="actions"><a class="btn primary" target="_blank" href="https://wa.me/56967487020?text=Hola%20Impresos%20Triplea%2C%20quiero%20cotizar">Cotizar por WhatsApp</a><a class="btn ghost" href="#servicios">Ver servicios</a></div>
+<div class="facts"><div><b>DTF 58 cm</b><span>Ancho de trabajo</span></div><div><b>$12.000/m</b><span>Sobre 5 m: $10.000</span></div><div><b>Todo Chile</b><span>Consulta por envíos</span></div></div>
+</div>
+<div class="visual reveal"><div class="logoBig">A</div><h2>Impresos Triplea</h2><p>La mejor impresión al mejor precio.</p><div class="pieces"><span>Flyers</span><span>Stickers</span><span>DTF Textil</span><span>Pendones</span></div></div>
+</div>
+</section>
+<section id="servicios" class="section"><div class="wrap"><p class="kicker">Soluciones gráficas</p><h2>Todo en un solo lugar.</h2><div class="grid"><article><b>01</b><h3>Impresión Offset</h3><p>Grandes volúmenes, flyers y papelería comercial.</p></article><article><b>02</b><h3>Impresión Láser</h3><p>Trabajos rápidos, precisos y tiradas cortas.</p></article><article><b>03</b><h3>Plotter</h3><p>Pendones, vinilos, señalética y gran formato.</p></article><article><b>04</b><h3>DTF Textil</h3><p>Poleras, bolsos, hoodies y ropa personalizada.</p></article></div></div></section>
+<section id="dtf" class="section cream"><div class="wrap split"><div class="dtfCard reveal"><span>DTF</span><b>TEXTIL</b><p>Calidad que se viste</p></div><div class="reveal"><p class="kicker">Personaliza tus prendas</p><h2>Colores intensos, alta durabilidad y acabado profesional.</h2><ul><li>Colores intensos</li><li>No se agrieta ni se despega fácilmente</li><li>Ideal para emprendedores y marcas</li><li>Ancho 58 cm</li></ul><div class="price"><b>$12.000 el metro</b><span>Sobre 5 metros: $10.000 cada metro</span></div></div></div></section>
+<section id="ofertas" class="section"><div class="wrap"><p class="kicker">Ofertas</p><h2>Promociones claras para comprar rápido.</h2><div class="offers"><article><small>Promoción</small><h3>Flyers Full Color</h3><b>$13.000 + IVA</b><p>1.000 unidades · 1 cara · papel couché</p></article><article class="dark"><small>Top</small><h3>DTF Textil</h3><b>$12.000/m</b><p>Sobre 5 metros: $10.000 c/u</p></article><article><small>Marca</small><h3>Tarjetas y stickers</h3><b>Cotiza fácil</b><p>Consulta por cantidades y terminaciones.</p></article></div></div></section>
+<section id="contacto" class="section contact"><div class="wrap split"><div><p class="kicker">Contacto</p><h2>Cotiza ahora por WhatsApp.</h2><p>Instagram: @impresostriplea<br>WhatsApp: +569 6748 7020</p></div><form id="quoteForm"><h3>Solicitud rápida</h3><input id="nombre" required placeholder="Tu nombre"><select id="producto" required><option value="">¿Qué quieres cotizar?</option><option>Flyers</option><option>DTF Textil</option><option>Tarjetas</option><option>Stickers</option><option>Pendones</option></select><input id="cantidad" required placeholder="Cantidad o medida"><textarea id="detalle" placeholder="Detalle adicional"></textarea><button class="btn primary">Enviar a WhatsApp</button></form></div></section>
+</main>
+<div class="mobileBar"><a href="#ofertas">Ofertas</a><a target="_blank" href="https://wa.me/56967487020?text=Hola%20Impresos%20Triplea%2C%20quiero%20cotizar">WhatsApp</a></div>
+<footer><div class="wrap foot"><span class="mark small">A</span><p>© 2026 Impresos Triplea · La mejor impresión al mejor precio.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
