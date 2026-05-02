@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Masajes con Lore | Relajación, antiestrés y corporal completo</title>
+  <meta name="description" content="Masajes de relajación, antiestrés y corporal completo con atención en centros de terapia y a domicilio cerca de estaciones de metro. Reserva previa con abono descontable." />
+  <meta name="theme-color" content="#66724f" />
+  <meta property="og:title" content="Masajes con Lore" />
+  <meta property="og:description" content="Relajación completa, antiestrés y masaje corporal completo. Atención en centros de terapia y a domicilio cerca de estaciones de metro." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <style>
+    :root{
+      --sage:#66724f;
+      --sage-2:#7e8b62;
+      --forest:#20382f;
+      --cream:#fbf5ea;
+      --paper:#fffaf1;
+      --sand:#e7d6bc;
+      --gold:#c89b49;
+      --terracotta:#b77754;
+      --ink:#24312c;
+      --muted:#6f746d;
+      --white:#fffdf8;
+      --shadow:0 24px 70px rgba(47,40,30,.14);
+      --soft-shadow:0 12px 38px rgba(47,40,30,.10);
+      --radius:28px;
+      --radius-sm:18px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(200,155,73,.13), transparent 34%),
+        radial-gradient(circle at 95% 15%, rgba(126,139,98,.12), transparent 32%),
+        linear-gradient(180deg, #fffdfa 0%, #fbf5ea 45%, #fffaf1 100%);
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      opacity:.33;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E");
+      mix-blend-mode:multiply;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin-inline:auto}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(255,253,248,.88);
+      border-bottom:1px solid rgba(200,155,73,.18);
+    }
+    .nav{height:76px; display:flex; align-items:center; justify-content:space-between; gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:210px}
+    .mark{width:48px;height:48px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(200,155,73,.22),rgba(126,139,98,.18));border:1px solid rgba(200,155,73,.28);box-shadow:var(--soft-shadow)}
+    .brand-title{line-height:1}
+    .brand-title strong{font-family:Georgia, 'Times New Roman', serif;font-size:1.62rem;letter-spacing:.2px;color:var(--forest);font-weight:500}
+    .brand-title span{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:5px;font-weight:700}
+    .navlinks{display:flex;align-items:center;gap:28px;font-size:.96rem;color:#3d473f}
+    .navlinks a{position:relative;padding:8px 0}
+    .navlinks a:after{content:"";position:absolute;left:0;bottom:2px;width:0;height:2px;background:var(--gold);transition:.25s ease}
+    .navlinks a:hover:after{width:100%}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:14px 20px;font-weight:800;letter-spacing:.01em;cursor:pointer;transition:.2s ease;white-space:nowrap}
+    .btn-primary{background:linear-gradient(135deg,var(--sage),#4f6549);color:#fff;box-shadow:0 14px 34px rgba(82,100,72,.25)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(82,100,72,.32)}
+    .btn-gold{background:linear-gradient(135deg,#d5a64d,#bf8743);color:#fff;box-shadow:0 14px 32px rgba(191,135,67,.27)}
+    .btn-ghost{background:rgba(255,255,255,.55);border:1px solid rgba(200,155,73,.34);color:var(--forest)}
+    .menu{display:none;background:transparent;border:0;color:var(--forest)}
+    .hero{position:relative;min-height:calc(100svh - 76px);display:grid;align-items:center;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(255,250,241,.96) 0%, rgba(255,250,241,.86) 38%, rgba(255,250,241,.18) 67%, rgba(255,250,241,.05) 100%), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1900&q=82') center right / cover no-repeat;z-index:-2}
+    .hero:after{content:"";position:absolute;inset:auto -10% -25% -10%;height:360px;background:radial-gradient(ellipse at center, rgba(200,155,73,.16), transparent 65%);z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:minmax(0, 1.02fr) minmax(320px,.78fr);gap:42px;align-items:center;padding:78px 0 60px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:900;margin-bottom:18px}
+    .eyebrow:before{content:"";width:44px;height:1px;background:var(--gold)}
+    h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;color:var(--forest);line-height:.94;font-size:clamp(3rem, 7vw, 7.4rem);letter-spacing:-.055em;margin:0}
+    .hero p{font-size:clamp(1.04rem,2vw,1.34rem);line-height:1.65;color:#314239;max-width:680px;margin:24px 0 0}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+    .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;max-width:760px}
+    .trust-card{background:rgba(255,253,248,.72);border:1px solid rgba(200,155,73,.18);border-radius:20px;padding:16px 18px;display:flex;gap:12px;align-items:center;box-shadow:0 12px 32px rgba(77,61,36,.08)}
+    .trust-card svg{min-width:26px;color:var(--sage)}
+    .trust-card strong{display:block;font-size:.94rem;color:var(--forest)}
+    .trust-card small{display:block;color:var(--muted);margin-top:2px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,253,248,.86),rgba(255,250,241,.74));border:1px solid rgba(200,155,73,.2);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;backdrop-filter:blur(12px)}
+    .feature-photo{height:310px;border-radius:24px;background:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=82') center/cover no-repeat;position:relative;overflow:hidden}
+    .feature-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(32,56,47,.66))}
+    .photo-label{position:absolute;left:18px;right:18px;bottom:18px;color:#fff;z-index:2}
+    .photo-label strong{font-size:1.3rem;display:block}.photo-label span{opacity:.92}
+    .quick-reserve{display:grid;gap:12px;margin-top:16px}
+    .reserve-line{display:flex;justify-content:space-between;gap:14px;align-items:center;background:rgba(255,255,255,.66);border:1px solid rgba(102,114,79,.14);border-radius:18px;padding:15px 16px}
+    .reserve-line span{color:var(--muted);font-size:.92rem}.reserve-line strong{color:var(--forest);text-align:right}
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 36px}
+    .section-head h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(2.1rem,4vw,3.8rem);line-height:1.05;color:var(--forest);margin:6px 0 0;letter-spacing:-.035em}
+    .section-head p{color:var(--muted);font-size:1.05rem;line-height:1.7;margin:14px auto 0}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .service{background:rgba(255,253,248,.82);border:1px solid rgba(200,155,73,.18);border-radius:26px;box-shadow:var(--soft-shadow);overflow:hidden;transition:.24s ease;position:relative}
+    .service:hover{transform:translateY(-6px);box-shadow:0 24px 58px rgba(47,40,30,.14)}
+    .service-img{height:170px;background:var(--img) center/cover no-repeat;position:relative}.service-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(32,56,47,.08))}
+    .service-body{padding:22px 22px 24px}.icon-bubble{width:56px;height:56px;border-radius:20px;background:linear-gradient(135deg,var(--sage),#526a4a);display:grid;place-items:center;color:#fff;margin:-48px 0 12px;position:relative;box-shadow:0 13px 28px rgba(82,100,72,.28);border:4px solid var(--white)}
+    .service h3{margin:0;color:var(--forest);font-size:1.24rem}.service p{color:var(--muted);line-height:1.55;margin:9px 0 0}.service small{display:inline-flex;margin-top:14px;color:var(--gold);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .bands{background:linear-gradient(135deg,rgba(102,114,79,.12),rgba(200,155,73,.10));border-block:1px solid rgba(200,155,73,.16)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:rgba(255,253,248,.82);border:1px solid rgba(200,155,73,.18);border-radius:24px;padding:24px;position:relative;box-shadow:0 14px 36px rgba(47,40,30,.08)}
+    .step-num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--sage);color:#fff;font-weight:900;margin-bottom:14px}.step h3{margin:0;color:var(--forest)}.step p{color:var(--muted);line-height:1.55;margin:8px 0 0}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}.panel{background:rgba(255,253,248,.86);border:1px solid rgba(200,155,73,.18);border-radius:var(--radius);box-shadow:var(--soft-shadow);padding:30px}.panel h2{font-family:Georgia,'Times New Roman',serif;color:var(--forest);font-weight:500;font-size:2.4rem;line-height:1.05;margin:0 0 12px}.panel p{color:var(--muted);line-height:1.7}
+    .location-list{display:grid;gap:12px;margin-top:22px}.location{display:flex;gap:14px;padding:17px;background:rgba(102,114,79,.07);border:1px solid rgba(102,114,79,.13);border-radius:18px}.location svg{min-width:28px;color:var(--sage)}.location strong{display:block;color:var(--forest)}.location span{color:var(--muted);display:block;margin-top:3px}
+    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}.price-card{border-radius:22px;padding:22px;background:#fff;border:1px solid rgba(200,155,73,.2);box-shadow:0 12px 32px rgba(47,40,30,.07)}.price-card.featured{background:linear-gradient(180deg,var(--sage),#4e6248);color:#fff}.price-card h3{margin:0;font-size:1.04rem}.price-card .price{font-family:Georgia,'Times New Roman',serif;font-size:2rem;margin:12px 0 4px}.price-card p{margin:0;color:inherit;opacity:.82;line-height:1.5}
+    .form-box{background:linear-gradient(180deg,rgba(255,253,248,.96),rgba(255,250,241,.9));border:1px solid rgba(200,155,73,.2);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px;position:relative;overflow:hidden}.form-box:before{content:"";position:absolute;right:-80px;top:-80px;width:220px;height:220px;background:radial-gradient(circle,rgba(200,155,73,.18),transparent 70%)}
+    .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}label{font-weight:800;color:var(--forest);font-size:.92rem}input,select,textarea{width:100%;border:1px solid rgba(102,114,79,.2);background:#fff;border-radius:16px;padding:14px 15px;font:inherit;color:var(--ink);outline:none;transition:.2s}input:focus,select:focus,textarea:focus{border-color:var(--sage);box-shadow:0 0 0 4px rgba(102,114,79,.12)}textarea{min-height:96px;resize:vertical}.form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.prepared{display:none;margin-top:18px;padding:18px;border-radius:18px;background:rgba(102,114,79,.09);border:1px dashed rgba(102,114,79,.32);white-space:pre-wrap;color:var(--forest);line-height:1.6}.prepared.show{display:block}
+    .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.faq details{background:rgba(255,253,248,.84);border:1px solid rgba(200,155,73,.18);border-radius:20px;padding:18px 20px;box-shadow:0 10px 28px rgba(47,40,30,.06)}.faq summary{cursor:pointer;font-weight:900;color:var(--forest)}.faq p{color:var(--muted);line-height:1.6;margin:12px 0 0}
+    .final-cta{padding:54px 0;background:linear-gradient(135deg,var(--forest),var(--sage));color:#fff;position:relative;overflow:hidden}.final-cta:before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1700&q=82') center/cover no-repeat;opacity:.12}.final-grid{position:relative;display:flex;justify-content:space-between;align-items:center;gap:26px}.final-cta h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,4vw,3.3rem);font-weight:500;line-height:1.04;margin:0}.final-cta p{opacity:.85;line-height:1.6;max-width:680px}
+    footer{padding:30px 0;background:#fffaf1;border-top:1px solid rgba(200,155,73,.18)}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:.94rem}.foot strong{color:var(--forest)}
+    .mobile-cta{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;box-shadow:0 18px 48px rgba(32,56,47,.28)}
+    .toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--forest);color:#fff;border-radius:999px;padding:13px 18px;box-shadow:0 18px 48px rgba(0,0,0,.25);transition:.25s;z-index:90}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .leaf{position:absolute;opacity:.23;color:var(--gold);pointer-events:none}.leaf.one{left:2%;top:18%;transform:rotate(-10deg)}.leaf.two{right:4%;top:12%;transform:rotate(18deg)}
+    @media(max-width:980px){.navlinks{display:none}.menu{display:block}.hero-grid{grid-template-columns:1fr;padding-top:48px}.hero-card{max-width:560px}.trust-row,.services-grid,.steps,.prices{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.final-grid{display:block}.final-grid .btn{margin-top:14px}.mobile-cta{display:flex}.hero{min-height:auto}.hero:before{background:linear-gradient(180deg, rgba(255,250,241,.98) 0%, rgba(255,250,241,.88) 46%, rgba(255,250,241,.38) 100%), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1300&q=82') center / cover no-repeat}}
+    @media(max-width:640px){.wrap{width:min(100% - 26px, var(--max))}.nav{height:70px}.brand-title strong{font-size:1.32rem}.brand-title span{font-size:.62rem}.mark{width:42px;height:42px;border-radius:15px}.hero-grid{gap:24px;padding:42px 0}.hero p{font-size:1.02rem}.hero-actions .btn{width:100%}.trust-row,.services-grid,.steps,.prices,.faq,.form-grid{grid-template-columns:1fr}.feature-photo{height:230px}.panel,.form-box{padding:22px}.section-head{text-align:left}.section-head h2{font-size:2.35rem}.foot{display:block}.foot div+div{margin-top:8px}.final-cta{padding-bottom:80px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Inicio Masajes con Lore">
+        <div class="mark" aria-hidden="true">
+          <svg width="31" height="31" viewBox="0 0 48 48" fill="none"><path d="M24 5c3.6 5.6 4.8 10.5 3.7 14.5 4.1-1.3 9-1.1 14.7.7-3.5 6.9-8.3 10.9-14.2 11.8 2.2 3.5 3.1 7.6 2.6 12.3-3.9-1.5-6.2-4.2-6.8-8.2-.7 4-2.9 6.7-6.8 8.2-.5-4.7.4-8.8 2.6-12.3-5.9-.9-10.7-4.9-14.2-11.8 5.7-1.8 10.6-2 14.7-.7C19.2 15.5 20.4 10.6 24 5Z" stroke="#c89b49" stroke-width="2.3" stroke-linejoin="round"/><path d="M8 31c5.7 2 11 2.4 16 1.2 5 1.2 10.3.8 16-1.2" stroke="#66724f" stroke-width="2.3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="brand-title"><strong>Masajes con Lore</strong><span>terapia & bienestar</span></div>
+      </a>
+      <nav class="navlinks" aria-label="Secciones">
+        <a href="#servicios">Servicios</a>
+        <a href="#ubicaciones">Ubicaciones</a>
+        <a href="#reserva">Reservar</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn-primary" href="#reserva" aria-label="Reservar una sesión">Reservar sesión</a>
+      <button class="menu" aria-label="Menú"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg></button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <svg class="leaf one" width="160" height="160" viewBox="0 0 200 200" fill="none"><path d="M40 155C83 72 128 45 170 38c-17 45-55 82-130 117Z" stroke="currentColor" stroke-width="2"/><path d="M70 130c30-38 58-59 92-83" stroke="currentColor" stroke-width="2"/><path d="M85 112c-18-5-31-14-43-28m72 6c-9-20-10-36-4-54" stroke="currentColor" stroke-width="2"/></svg>
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Relajación, calma y bienestar</span>
+          <h1>Masaje corporal completo</h1>
+          <p>Sesiones de relajación completa y antiestrés con atención personalizada en centros de terapia o a domicilio cerca de estaciones de metro.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#reserva">Solicitar reserva</a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+            <a class="btn btn-gold" href="#ubicaciones">Ver ubicaciones</a>
+          </div>
+          <div class="trust-row" aria-label="Datos principales">
+            <div class="trust-card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-4.4 7-11A7 7 0 0 0 5 10c0 6.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Centros de terapia</strong><small>Ubicaciones cerca del metro</small></div></div>
+            <div class="trust-card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-6h6v6"/></svg><div><strong>A domicilio</strong><small>Fines de semana según zona</small></div></div>
+            <div class="trust-card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v3M17 3v3M4 8h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="m9 14 2 2 4-5"/></svg><div><strong>Reserva previa</strong><small>Agenda con anticipación</small></div></div>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Información rápida">
+          <div class="feature-photo">
+            <div class="photo-label"><strong>Regálate una pausa</strong><span>Un espacio para soltar tensión, respirar y recuperar equilibrio.</span></div>
+          </div>
+          <div class="quick-reserve">
+            <div class="reserve-line"><span>Masaje corporal completo</span><strong>Desde $22.000</strong></div>
+            <div class="reserve-line"><span>Modalidad</span><strong>Centro o domicilio</strong></div>
+            <div class="reserve-line"><span>Reserva</span><strong>Abono descontable</strong></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Servicios</span>
+          <h2>Elige el masaje que necesitas hoy</h2>
+          <p>Atención pensada para quienes buscan relajarse, bajar el estrés y disfrutar una sesión corporal completa en un ambiente tranquilo.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service" style="--img:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=700&q=80')">
+            <div class="service-img"></div><div class="service-body"><div class="icon-bubble"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c5-3 8-7 8-11a8 8 0 0 0-16 0c0 4 3 8 8 11Z"/><path d="M9 10c1 2 2 3 3 3s2-1 3-3"/></svg></div><h3>Relajación completa</h3><p>Una sesión para desconectar, descansar el cuerpo y renovar tu energía.</p><small>bienestar</small></div>
+          </article>
+          <article class="service" style="--img:url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80')">
+            <div class="service-img"></div><div class="service-body"><div class="icon-bubble"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 13c-2 1-3 2.5-3 4a3 3 0 0 0 6 0c0-1.5-1-3-3-4Zm8-2c-2 1-3 2.5-3 4a3 3 0 0 0 6 0c0-1.5-1-3-3-4Z"/><path d="M12 5c-2 1-3 2.5-3 4a3 3 0 0 0 6 0c0-1.5-1-3-3-4Z"/></svg></div><h3>Antiestrés</h3><p>Ideal para soltar la carga del día y recuperar una sensación de calma.</p><small>calma</small></div>
+          </article>
+          <article class="service" style="--img:url('https://images.unsplash.com/photo-1542848284-8afa78a08ccb?auto=format&fit=crop&w=700&q=80')">
+            <div class="service-img"></div><div class="service-body"><div class="icon-bubble"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14c3-5 6-7 8-7s5 2 8 7"/><path d="M6 17c3-3 5-4 6-4s3 1 6 4"/><path d="M12 4v3"/></svg></div><h3>Corporal completo</h3><p>Trabajo por ambos lados del cuerpo para una experiencia integral.</p><small>completo</small></div>
+          </article>
+          <article class="service" style="--img:url('https://images.unsplash.com/photo-1591343395902-1adcb454c4e2?auto=format&fit=crop&w=700&q=80')">
+            <div class="service-img"></div><div class="service-body"><div class="icon-bubble"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 11c2-4 4-6 5-6s3 2 5 6c1.4 2.8.2 7-5 8-5.2-1-6.4-5.2-5-8Z"/><path d="M9 13c1 2 2 3 3 3s2-1 3-3"/></svg></div><h3>Domicilio</h3><p>Atención fines de semana para personas que vivan cerca de algún metro.</p><small>comodidad</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bands" id="proceso">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Reserva fácil</span>
+          <h2>Agenda tu sesión en cuatro pasos</h2>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-num">1</div><h3>Elige tu masaje</h3><p>Selecciona relajación completa, antiestrés o corporal completo.</p></article>
+          <article class="step"><div class="step-num">2</div><h3>Elige modalidad</h3><p>Centro de terapia o atención a domicilio según disponibilidad.</p></article>
+          <article class="step"><div class="step-num">3</div><h3>Reserva con abono</h3><p>El abono asegura el box y se descuenta del valor total.</p></article>
+          <article class="step"><div class="step-num">4</div><h3>Disfruta tu sesión</h3><p>Al finalizar, solo cancelas la diferencia correspondiente.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicaciones">
+      <div class="wrap split">
+        <div class="panel">
+          <span class="eyebrow">Dónde atenderte</span>
+          <h2>Centros de terapia y atención a domicilio</h2>
+          <p>Elige el punto que más te acomode. Las sesiones requieren agenda previa para asegurar disponibilidad.</p>
+          <div class="location-list">
+            <div class="location"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-4.4 7-11A7 7 0 0 0 5 10c0 6.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Serrano 63</strong><span>Cerca del Metro Universidad de Chile.</span></div></div>
+            <div class="location"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-4.4 7-11A7 7 0 0 0 5 10c0 6.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Santo Domingo</strong><span>Cerca del Metro Cumming.</span></div></div>
+            <div class="location"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-4.4 7-11A7 7 0 0 0 5 10c0 6.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Providencia</strong><span>Cerca del Metro Pedro de Valdivia.</span></div></div>
+            <div class="location"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/></svg><div><strong>Atención a domicilio</strong><span>Disponible fines de semana cerca de estaciones de metro.</span></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">Valores</span>
+          <h2>Opciones simples para reservar</h2>
+          <p>Consulta disponibilidad según centro, día y modalidad. Los valores pueden variar por ubicación o domicilio.</p>
+          <div class="prices">
+            <div class="price-card"><h3>Corporal completo</h3><div class="price">$22.000</div><p>Sesión de relajación completa por ambos lados.</p></div>
+            <div class="price-card featured"><h3>Reserva de box</h3><div class="price">Abono</div><p>El abono se descuenta al finalizar la sesión.</p></div>
+            <div class="price-card"><h3>Domicilio</h3><div class="price">Según zona</div><p>Disponible fines de semana cerca de metro.</p></div>
+          </div>
+          <p style="margin-top:18px;font-size:.95rem"><strong>Importante:</strong> reserva con anticipación para confirmar horario, ubicación y modalidad de atención.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserva" class="bands">
+      <div class="wrap split">
+        <div class="panel">
+          <span class="eyebrow">Agenda tu momento</span>
+          <h2>Prepara tu solicitud de reserva</h2>
+          <p>Completa tus datos y deja lista tu solicitud para enviarla por Messenger o el canal donde estés conversando.</p>
+          <div class="location-list">
+            <div class="location"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v3M17 3v3M4 8h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/></svg><div><strong>Agenda previa</strong><span>Idealmente con 4 horas de anticipación.</span></div></div>
+            <div class="location"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 6H9.5a3 3 0 0 0 0 6H15a3 3 0 0 1 0 6H6"/></svg><div><strong>Abono de reserva</strong><span>Se descuenta del total al finalizar la sesión.</span></div></div>
+          </div>
+        </div>
+        <div class="form-box">
+          <form id="bookingForm">
+            <div class="form-grid">
+              <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" placeholder="Ej: Carolina" autocomplete="name" /></div>
+              <div class="field"><label for="servicio">Servicio</label><select id="servicio" name="servicio"><option>Masaje corporal completo</option><option>Relajación completa</option><option>Antiestrés</option><option>Consulta por modalidad</option></select></div>
+              <div class="field"><label for="modalidad">Modalidad</label><select id="modalidad" name="modalidad"><option>Centro de terapia - Providencia</option><option>Centro - Serrano 63</option><option>Centro - Santo Domingo</option><option>Domicilio cerca de metro</option></select></div>
+              <div class="field"><label for="horario">Día y horario preferido</label><input id="horario" name="horario" placeholder="Ej: sábado en la tarde" /></div>
+              <div class="field full"><label for="comentario">Comentario opcional</label><textarea id="comentario" name="comentario" placeholder="Ej: busco una sesión antiestrés y puedo llegar al Metro Pedro de Valdivia."></textarea></div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-primary" id="prepareBtn">Preparar solicitud</button>
+              <a class="btn btn-ghost" href="#preguntas">Ver preguntas frecuentes</a>
+            </div>
+            <div id="prepared" class="prepared" aria-live="polite"></div>
+            <div class="form-actions" id="copyActions" style="display:none"><button type="button" class="btn btn-gold" id="copyBtn">Copiar solicitud</button><button type="button" class="btn btn-ghost" id="clearBtn">Limpiar</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Antes de reservar</h2>
+        </div>
+        <div class="faq">
+          <details open><summary>¿Con cuánto tiempo debo agendar?</summary><p>Se recomienda agendar con anticipación para asegurar el box, el horario y la modalidad de atención. La reserva puede requerir un pequeño abono.</p></details>
+          <details><summary>¿El abono se pierde?</summary><p>El abono se utiliza para reservar el box y se descuenta del valor total al finalizar la sesión. Solo cancelas la diferencia correspondiente.</p></details>
+          <details><summary>¿Hay atención a domicilio?</summary><p>Sí, hay atención a domicilio fines de semana para personas que vivan cerca de estaciones de metro. La disponibilidad se confirma al reservar.</p></details>
+          <details><summary>¿Dónde están los centros de atención?</summary><p>Hay atención en Serrano 63, Santo Domingo y Providencia, cerca de estaciones como Universidad de Chile, Cumming y Pedro de Valdivia.</p></details>
+          <details><summary>¿Qué masaje puedo elegir?</summary><p>Puedes consultar por relajación completa, antiestrés y masaje corporal completo por ambos lados.</p></details>
+          <details><summary>¿El masaje reemplaza atención médica?</summary><p>No. Este servicio está orientado al bienestar y la relajación. Si tienes una condición médica o dolor persistente, consulta primero con un profesional de salud.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap final-grid">
+        <div><h2>Reserva una pausa para tu cuerpo.</h2><p>Agenda tu sesión de relajación, confirma tu modalidad y recibe una atención personalizada en un ambiente tranquilo.</p></div>
+        <a class="btn btn-gold" href="#reserva">Solicitar reserva</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div><strong>Masajes con Lore</strong> · Relajación y bienestar</div>
+      <div>Atención en centros de terapia y a domicilio según disponibilidad.</div>
+    </div>
+  </footer>
+
+  <a class="btn btn-primary mobile-cta" href="#reserva">Reservar sesión</a>
+  <div class="toast" id="toast">Solicitud copiada</div>
+
+  <script>
+    const $ = (s) => document.querySelector(s);
+    const prepared = $('#prepared');
+    const copyActions = $('#copyActions');
+    const toast = $('#toast');
+    let lastMessage = '';
+
+    function buildMessage(){
+      const nombre = $('#nombre').value.trim() || 'Hola';
+      const servicio = $('#servicio').value;
+      const modalidad = $('#modalidad').value;
+      const horario = $('#horario').value.trim() || 'horario por confirmar';
+      const comentario = $('#comentario').value.trim();
+      return `Hola Lore, soy ${nombre}. Quisiera consultar disponibilidad para ${servicio}.\n\nModalidad: ${modalidad}.\nDía u horario ideal: ${horario}.` + (comentario ? `\nComentario: ${comentario}.` : '') + `\n\nQuedo atenta/o para confirmar valor, abono y disponibilidad.`;
+    }
+    $('#prepareBtn').addEventListener('click', () => {
+      lastMessage = buildMessage();
+      prepared.textContent = lastMessage;
+      prepared.classList.add('show');
+      copyActions.style.display = 'flex';
+      prepared.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+    $('#copyBtn').addEventListener('click', async () => {
+      if(!lastMessage) lastMessage = buildMessage();
+      try{ await navigator.clipboard.writeText(lastMessage); }
+      catch(e){
+        const area=document.createElement('textarea'); area.value=lastMessage; document.body.appendChild(area); area.select(); document.execCommand('copy'); area.remove();
+      }
+      toast.classList.add('show');
+      setTimeout(()=>toast.classList.remove('show'), 1800);
+    });
+    $('#clearBtn').addEventListener('click', () => {
+      $('#bookingForm').reset(); prepared.textContent=''; prepared.classList.remove('show'); copyActions.style.display='none'; lastMessage='';
+    });
+  </script>
+</body>
+</html>
