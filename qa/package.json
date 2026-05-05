@@ -1,0 +1,1 @@
+{"scripts":{"qa":"node playwright-qa.js"},"dependencies":{"@playwright/test":"latest","playwright":"latest"},"devDependencies":{}}
