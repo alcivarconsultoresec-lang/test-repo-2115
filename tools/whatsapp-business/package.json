@@ -1,0 +1,1 @@
+{"name":"nox-forge-whatsapp-business","version":"0.1.0","private":true,"type":"module","scripts":{"send:text":"node src/send-text.js","send:template":"node src/send-template.js","webhook":"node src/webhook-server.js","mcp":"node src/mcp-server.js"},"dependencies":{"@modelcontextprotocol/sdk":"latest","dotenv":"latest","express":"latest"},"devDependencies":{}}
