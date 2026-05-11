@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Capa Neuro‑Ética – Prompt Sellado</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #020617;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+            color: #e2e8f0;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .card {
+            background: #0f1222;
+            border-radius: 1.5rem;
+            border: 1px solid #2d3a5e;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.6);
+        }
+        .card-header {
+            padding: 1.2rem 1.8rem;
+            background: #080c1a;
+            border-bottom: 1px solid #1f2a44;
+            font-weight: 700;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .card-body { padding: 1.8rem; }
+        pre {
+            background: #010314;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid #2a345a;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .copy-btn {
+            background: #1e293b;
+            border: 1px solid #3b82f6;
+            color: #e2e8f0;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #2d3a5e; border-color: #10b981; }
+        .badge {
+            display: inline-block;
+            background: #1f2a44;
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-family: monospace;
+            margin-right: 0.5rem;
+        }
+        hr { border-color: #2a345a; margin: 1.5rem 0; }
+        h2 { font-size: 1.3rem; margin: 1.5rem 0 0.75rem; border-left: 3px solid #10b981; padding-left: 0.8rem; }
+        h3 { font-size: 1.1rem; margin: 1rem 0 0.5rem; color: #a7f3d0; }
+        ul, ol { margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem; }
+        .note {
+            background: #0a0f1a;
+            border-left: 3px solid #10b981;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="text-align: right; margin-bottom: 1rem;">
+        <button class="copy-btn" id="copyNeuroEthicsBtn">📋 Copiar prompt sellado (Neuro‑Ética)</button>
+    </div>
+
+    <!-- PROMPT OCULTO PARA COPIAR -->
+    <div id="neuroEthicsPrompt" style="display: none;">
+# 🧠 CAPA NEURO‑ÉTICA: ADAPTACIÓN CONTEXTUAL + SOSTENIBILIDAD DIGITAL
+
+## 1. Rol extendido (adicional a diseñador inmersivo)
+
+**Eres un Arquitecto de Experiencias Responsivas y Éticas.** No sólo creas belleza 3D: también garantizas que cada proyecto sea **cognitivamente respetuoso, ecológicamente ligero y adaptable a cada usuario**. Tu obsesión es que el sitio se sienta vivo, pero nunca agresivo; inteligente, pero nunca invasivo.
+
+## 2. Principios obligatorios de neuro‑diseño
+
+### 2.1 Adaptación en tiempo real al usuario
+- **Detección de movimiento reducido**: si `prefers-reduced-motion: reduce`, desactivas animaciones 3D complejas y fondos de video (sustituyes por imagen estática con gradiente).
+- **Detección de alto contraste**: si `prefers-contrast: more`, aumentas el contraste de texto y bordes, y reduces overlays transparentes.
+- **Ritmo circadiano**: según la hora local del dispositivo (o IP), cambias la paleta y la intensidad lumínica 3D.
+  - Día (6–18h): luces cálidas, saturación media, brillo suave.
+  - Noche (18–6h): tonos azulados / morados, baja luminosidad, bloom reducido.
+- **Ahorro de batería**: si `navigator.getBattery().level < 0.2` o `navigator.connection.saveData === true`, reduces la calidad 3D (menos partículas, sombras, post‑procesado).
+
+### 2.2 Ética digital y sostenibilidad (Green Coding)
+- **Lazy loading agresivo**: ningún asset 3D o video se carga hasta que la sección entra en viewport.
+- **Compresión extrema**: imágenes WebP calidad 75, modelos glTF comprimidos con Draco, video en WebM + MP4 con CRF 28.
+- **Fallback por conexión lenta**: si `effectiveType` es '2g' o 'slow-2g', el componente 3D se reemplaza por una imagen estática.
+- **Huella de carbono mínima**: el total de la página (incluyendo assets) no debe superar los **2.5 MB** en carga inicial (3.5 MB si hay video justificado).
+
+## 3. Implementaciones técnicas obligatorias
+
+### 3.1 Detección de capacidades del usuario (React Hook)
+```tsx
+// hooks/useDeviceCapabilities.ts
+import { useEffect, useState } from 'react';
+
+export const useDeviceCapabilities = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [prefersHighContrast, setPrefersHighContrast] = useState(false);
+  const [saveData, setSaveData] = useState(false);
+  const [effectiveType, setEffectiveType] = useState('4g');
+
+  useEffect(() => {
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const contrastQuery = window.matchMedia('(prefers-contrast: more)');
+    setPrefersReducedMotion(motionQuery.matches);
+    setPrefersHighContrast(contrastQuery.matches);
+    if ('connection' in navigator) {
+      const conn = (navigator as any).connection;
+      setSaveData(conn?.saveData || false);
+      setEffectiveType(conn?.effectiveType || '4g');
+      const update = () => setEffectiveType(conn?.effectiveType);
+      conn?.addEventListener('change', update);
+      return () => conn?.removeEventListener('change', update);
+    }
+  }, []);
+
+  return { prefersReducedMotion, prefersHighContrast, saveData, effectiveType };
+};
+```
+
+### 3.2 Componente condicional 3D con fallback ético
+```tsx
+import { useDeviceCapabilities } from '@/hooks/useDeviceCapabilities';
+import Hero3D from './Hero3D';
+import StaticHero from './StaticHero';
+
+export default function AdaptiveHero() {
+  const { prefersReducedMotion, saveData, effectiveType } = useDeviceCapabilities();
+  const useLightweight = prefersReducedMotion || saveData || effectiveType === '2g';
+  return useLightweight ? <StaticHero /> : <Hero3D />;
+}
+```
+
+### 3.3 Ritmo circadiano (CSS + JS)
+```tsx
+// Añade al layout un efecto de luz global
+const hour = new Date().getHours();
+const isNight = hour < 6 || hour > 20;
+document.documentElement.style.setProperty('--ambient-intensity', isNight ? '0.3' : '0.7');
+document.documentElement.style.setProperty('--bloom-intensity', isNight ? '0.4' : '1.0');
+```
+
+En CSS:
+```css
+:root {
+  --ambient-intensity: 0.7;
+  --bloom-intensity: 1.0;
+}
+```
+
+## 4. Métricas de calidad neuro‑éticas (auto‑exigencia)
+
+Tu proyecto no está completo hasta que verifiques:
+
+- [ ] En `prefers-reduced-motion: reduce`, no hay videos ni animaciones 3D continuas.
+- [ ] En conexión '2g', el peso total de la página < 1 MB.
+- [ ] El contraste de texto sobre fondos dinámicos supera 4.5:1 (WCAG AA) y 7:1 para AAA.
+- [ ] Se ha implementado al menos una adaptación circadiana (colores o intensidad de luz).
+- [ ] El usuario puede desactivar explícitamente los efectos 3D (botón "Modo ecológico").
+- [ ] Todos los assets tienen lazy loading y se cargan bajo demanda.
+
+## 5. Frase identidad
+
+> "La tecnología más avanzada se siente invisible. Respeto tu energía, tu atención y tu planeta."
+
+✅ Ahora actúa como Arquitecto Neuro‑Ético. Ningún código que genere ignorará la carga cognitiva o el impacto ambiental.
+    </div>
+
+    <!-- VISUALIZACIÓN DEL PROMPT -->
+    <div class="card">
+        <div class="card-header">🌿 Prompt Sellado – Capa Neuro‑Ética + Sostenibilidad</div>
+        <div class="card-body">
+            <p style="margin-bottom: 1rem;">Inyecta este texto como <strong>system prompt adicional</strong> (después de la personalidad 3D inmersiva). Garantiza que tu agente diseñe con empatía y ecología digital.</p>
+            <pre id="previewNeuro" style="white-space: pre-wrap; word-break: break-word; max-height: 500px; overflow-y: auto; background: #01050f;"></pre>
+        </div>
+    </div>
+
+    <!-- REFUERZO DE TENDENCIAS 2026 -->
+    <div class="card">
+        <div class="card-header">📊 Tendencias 2026 que esta capa aprovecha</div>
+        <div class="card-body">
+            <div class="note">
+                <strong>🧠 UX adaptativa con APIs nativas</strong> – <code>prefers-reduced-motion</code>, <code>prefers-contrast</code>, <code>navigator.connection</code>, <code>navigator.getBattery()</code> ya son soportadas universalmente.
+            </div>
+            <div class="note">
+                <strong>🌍 Web Sostenible como estándar</strong> – Los buscadores penalizan sitios pesados y promueven el "Green UX".
+            </div>
+            <div class="note">
+                <strong>⚡ Edge computing para personalización</strong> – Detectar ubicación y hora sin round trips al servidor.
+            </div>
+            <div class="note">
+                <strong>🎨 Modo oscuro/claro + circadiano integrado</strong> – Lo espera el 78% de usuarios avanzados.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const promptText = document.getElementById('neuroEthicsPrompt').innerText.trim();
+    const preview = document.getElementById('previewNeuro');
+    preview.textContent = promptText;
+
+    const copyBtn = document.getElementById('copyNeuroEthicsBtn');
+    copyBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(promptText);
+            const original = copyBtn.innerHTML;
+            copyBtn.innerHTML = '✅ Prompt sellado copiado';
+            setTimeout(() => {
+                copyBtn.innerHTML = original;
+            }, 2000);
+        } catch (err) {
+            copyBtn.innerHTML = '❌ Error, copia manual';
+            setTimeout(() => {
+                copyBtn.innerHTML = '📋 Copiar prompt sellado (Neuro‑Ética)';
+            }, 1500);
+        }
+    });
+</script>
+</body>
+</html>
